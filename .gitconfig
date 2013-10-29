@@ -1,0 +1,31 @@
+[user]
+	name = Eric Druid
+	email = eric.druid@gmail.com
+[color]
+	ui = true
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[credential]
+	helper = cache --timeout=3600
+[core]
+	excludesfile = /home/druid/.gitignore_global
+
+[push]
+	default = current
+[alias]
+   last-branch-commits = "!f() { for b in `git branch $@ | cut -c 3- | grep -v '[-]>'`; do echo $b,`git log -1 --pretty=format:%aN,%ai $b`; done | sort -k 2,4 -t , | column -t -s ,; }; f"
+[log]
+   date = local
+[push]
+   default = current
+[diff]
+   algorithm = histogram
+[merge]
+   conflictstyle = diff3
+[rerere]
+   enabled = yes
+[grep]
+   lineNumber = true
+

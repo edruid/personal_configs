@@ -1,0 +1,5 @@
+alias ls="ls -F --color=auto"
+bindkey "OA" history-beginning-search-backward   # up
+bindkey "OB" history-beginning-search-forward    # down
+
+PATH=$PATH:$HOME/.rvm/bin:/home/druid/.rvm/gems/ruby-1.9.3-p286/bin:/home/druid/.rvm/gems/ruby-1.9.3-p286@global/bin:/home/druid/.rvm/rubies/ruby-1.9.3-p286/bin
