@@ -7,25 +7,25 @@ set tabstop=3
 set shiftwidth=3
 set whichwrap=h,l,[,]
 set backspace=2
-" Ignorera case i sökningar, men bara om sökningen är bara lowercase. (\C overridar)
+" Ignorera case i sï¿½kningar, men bara om sï¿½kningen ï¿½r bara lowercase. (\C overridar)
 set ignorecase
 set smartcase
 set showcmd
 set scrolloff=17
 syntax on
-" % får gärna tro på <> oxo
+" % fï¿½r gï¿½rna tro pï¿½ <> oxo
 set matchpairs+=<:>
-" Använd syntax highlighting för att se skillnad på tab och space.
-" Även saker förbi tkn80 och mellanslag sist på rader.
-" Av ngn anledning får Over80 alltid prioritet över EndSpace.
-" (Varför är dom ens exklusiva?)
+" Anvï¿½nd syntax highlighting fï¿½r att se skillnad pï¿½ tab och space.
+" ï¿½ven saker fï¿½rbi tkn80 och mellanslag sist pï¿½ rader.
+" Av ngn anledning fï¿½r Over80 alltid prioritet ï¿½ver EndSpace.
+" (Varfï¿½r ï¿½r dom ens exklusiva?)
 syn match Tab "\t"
 "syn match Over80 /\%81v.*/
 syn match EndSpace / *$/
 hi def Tab      ctermbg=darkblue guibg=#000060
 hi def Over80   ctermfg=yellow   guifg=#ffffcc
 hi def EndSpace ctermbg=blue     guibg=#0000ff
-" Kopiera indentering exakt. (Default ersätter space med tab "när det går", vilket oftast är fel.
+" Kopiera indentering exakt. (Default ersï¿½tter space med tab "nï¿½r det gï¿½r", vilket oftast ï¿½r fel.
 set copyindent
 
 set viminfo='100,\"1000,:200,%,n~/.viminfo
@@ -41,65 +41,46 @@ augroup resCur
 	autocmd BufWinEnter * call ResCur()
 augroup END
 
+nmap <esc>[1;3A <C-w><esc>OA
+nmap <esc>[1;3B <C-w><esc>OB
+nmap <esc>[1;3C <C-w><esc>OC
+nmap <esc>[1;3D <C-w><esc>OD
 
-" Fixa piltangerna med qualifiers
-" shift (+ctrl)
-	" xter<esc>m
-		nmap <esc>[1;2A <C-w><esc>OA
-		nmap <esc>[1;2B <C-w><esc>OB
-		nmap <esc>[1;2C <C-w><esc>OC
-		nmap <esc>[1;2D <C-w><esc>OD
-		imap <esc>[1;2A <C-O><C-w><esc>OA
-		imap <esc>[1;2B <C-O><C-w><esc>OB
-		imap <esc>[1;2C <C-O><C-w><esc>OC
-		imap <esc>[1;2D <C-O><C-w><esc>OD
-		nmap <esc>[1;6C $
-		nmap <esc>[1;6D 0
-		imap <esc>[1;6C <C-O>$
-		imap <esc>[1;6D <C-O>0
-	" aterm/rxvt
-		nmap <esc>[c $
-		nmap <esc>[d 0
-		imap <esc>[c <C-O>$
-		imap <esc>[d <C-O>0
-" alt
-	" xterm
-		nmap <esc>[1;3C / <CR>
-		nmap <esc>[1;3D ? <CR>
-		imap <esc>[1;3C <C-O>/ <CR>
-		imap <esc>[1;3D <C-O>? <CR>
-	" aterm/rxvt
-		nmap <esc><esc>[C / <CR>
-		nmap <esc><esc>[D ? <CR>
-		imap <esc><esc>[C <C-O>/ <CR>
-		imap <esc><esc>[D <C-O>? <CR>
-" ctrl
-	" xterm
-		nmap <esc>[1;5C w
-		nmap <esc>[1;5D b
-		imap <esc>[1;5C <C-O>w
-		imap <esc>[1;5D <C-O>b
-	" aterm/rxvt
-		nmap <esc>Oc w
-		nmap <esc>Od b
-		imap <esc>Oc <C-O>w
-		imap <esc>Od <C-O>b
-" shift+alt (+ctrl)
-	" xterm
-		nmap <esc>[1;4C / <CR>
-		nmap <esc>[1;4D ? <CR>
-		nmap <esc>[1;8C / <CR>
-		nmap <esc>[1;8D ? <CR>
-		imap <esc>[1;4C <C-O>/ <CR>
-		imap <esc>[1;4D <C-O>? <CR>
-		imap <esc>[1;8C <C-O>/ <CR>
-		imap <esc>[1;8D <C-O>? <CR>
-	" aterm/rxvt
-		nmap <esc><esc>[c / <CR>
-		nmap <esc><esc>[d ? <CR>
-		imap <esc><esc>[c <C-O>/ <CR>
-		imap <esc><esc>[d <C-O>? <CR>
+imap <esc>[1;3A <C-O><C-w><esc>OA
+imap <esc>[1;3B <C-O><C-w><esc>OB
+imap <esc>[1;3C <C-O><C-w><esc>OC
+imap <esc>[1;3D <C-O><C-w><esc>OD
 
+nmap <esc>[c $
+nmap <esc>[d 0
+
+imap <esc>[c <C-O>$
+imap <esc>[d <C-O>0
+
+nmap <esc>[1;5C w
+nmap <esc>[1;5D b
+
+imap <esc>[1;5C <C-O>w
+imap <esc>[1;5D <C-O>b
+
+nmap <esc>Oc w
+nmap <esc>Od b
+imap <esc>Oc <C-O>w
+imap <esc>Od <C-O>b
+
+nmap <esc>[1;4C / <CR>
+nmap <esc>[1;4D ? <CR>
+nmap <esc>[1;8C / <CR>
+nmap <esc>[1;8D ? <CR>
+imap <esc>[1;4C <C-O>/ <CR>
+imap <esc>[1;4D <C-O>? <CR>
+imap <esc>[1;8C <C-O>/ <CR>
+imap <esc>[1;8D <C-O>? <CR>
+
+nmap <esc><esc>[c / <CR>
+nmap <esc><esc>[d ? <CR>
+imap <esc><esc>[c <C-O>/ <CR>
+imap <esc><esc>[d <C-O>? <CR>
 
 " inoremap        (  ()<Left>
 " inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
