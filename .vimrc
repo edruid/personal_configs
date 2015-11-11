@@ -2,6 +2,7 @@ set guicursor=a:blinkon0
 "colorscheme murphy
 colorscheme elflord
 
+set hlsearch
 set autoindent
 set tabstop=3
 set shiftwidth=3
