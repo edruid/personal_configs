@@ -42,11 +42,13 @@ augroup resCur
 	autocmd BufWinEnter * call ResCur()
 augroup END
 
+" Change buffer using alt + arrow
 nmap <esc>[1;3A <C-w><esc>OA
 nmap <esc>[1;3B <C-w><esc>OB
 nmap <esc>[1;3C <C-w><esc>OC
 nmap <esc>[1;3D <C-w><esc>OD
 
+" Change buffer using alt + arrow while in insert mode
 imap <esc>[1;3A <C-O><C-w><esc>OA
 imap <esc>[1;3B <C-O><C-w><esc>OB
 imap <esc>[1;3C <C-O><C-w><esc>OC
