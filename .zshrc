@@ -48,7 +48,8 @@ bindkey '^[[1;5D' emacs-backward-word
 #bindkey "\eOd" backward-word
 #bindkey "\eOc" forward-word
 
-alias py=python
+alias py=pip list 2> /dev/null | grep -q '\bipython\b' && python -m IPython || python
+alias py3=pip3 list 2> /dev/null | grep -q '\bipython\b' && python3 -m IPython || python3
 alias find='noglob find'
 
 update-zsh() {
