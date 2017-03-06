@@ -109,8 +109,8 @@ autocmd BufEnter *.rhtml source ~/.vim/rhtml.vim
 autocmd BufEnter *.scss  source ~/.vim/scss.vim
 autocmd BufEnter *.php   source ~/.vim/php.vim
 
-:command Wq %s/\s*$// | wq
-:command WQ %s/\s*$// | wq
-:command W %s/\s*$// | w
+:command Wq %s/\s\+$//e | wq
+:command WQ %s/\s\+$//e | wq
+:command W %s/\s\+$//e | w
 :command Q q
 
