@@ -1,0 +1,19 @@
+.tabbrowser-tab,.tab-background {
+    height:29px;
+}
+.tab-stack {
+    width: 100%;
+}
+.tabbrowser-tabs .scrollbox-innerbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+.tabbrowser-tabs .arrowscrollbox-scrollbox {
+    overflow: visible;
+    display: block;
+}
+.tabbrowser-tabs .scrollbutton-up,
+.tabbrowser-tabs .scrollbutton-down,
+#alltabs-button{
+    display: none;
+}
