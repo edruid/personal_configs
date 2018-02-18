@@ -1,19 +1,25 @@
-.tabbrowser-tab,.tab-background {
-    height:29px;
+#main-window:not(#f) .tabbrowser-tab {
+   -moz-box-sizing: border-box !important;
+   height: 33px !important;
+   vertical-align: top !important;
 }
-.tab-stack {
-    width: 100%;
+#main-window:not(#f) .titlebar-button {
+   height: 33px !important;
 }
-.tabbrowser-tabs .scrollbox-innerbox {
-    display: flex;
-    flex-wrap: wrap;
+#main-window:not(#f) #titlebar-buttonbox,
+ .tabbrowser-arrowscrollbox scrollbox > box {
+   display: block !important;
 }
-.tabbrowser-tabs .arrowscrollbox-scrollbox {
-    overflow: visible;
-    display: block;
+#main-window:not(#f) #titlebar-buttonbox {
+   vertical-align: top !important;
 }
-.tabbrowser-tabs .scrollbutton-up,
-.tabbrowser-tabs .scrollbutton-down,
-#alltabs-button{
-    display: none;
+.tabbrowser-arrowscrollbox scrollbox {
+   overflow: visible !important;
+}
+.tab-label-container[textoverflow]:not([pinned]) {
+   mask-image: unset !important;
+}
+.scrollbutton-up,
+.scrollbutton-down {
+   display: none !important;
 }
