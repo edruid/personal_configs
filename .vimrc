@@ -4,29 +4,27 @@ colorscheme elflord
 
 set hlsearch
 set autoindent
-set tabstop=3
-set shiftwidth=3
+set tabstop=4
+set shiftwidth=4
 set whichwrap=h,l,[,]
 set backspace=2
-" Ignorera case i s�kningar, men bara om s�kningen �r bara lowercase. (\C overridar)
-set ignorecase
-set smartcase
 set showcmd
 set scrolloff=17
+set expandtab
 syntax on
-" % f�r g�rna tro p� <> oxo
-set matchpairs+=<:>
-" Anv�nd syntax highlighting f�r att se skillnad p� tab och space.
-" �ven saker f�rbi tkn80 och mellanslag sist p� rader.
-" Av ngn anledning f�r Over80 alltid prioritet �ver EndSpace.
-" (Varf�r �r dom ens exklusiva?)
+" % får gärna tro på <> oxo
+"set matchpairs+=<:>
+" Använd syntax highlighting för att se skillnad på tab och space.
+" även saker förbi tkn80 och mellanslag sist på rader.
+" Av ngn anledning får Over80 alltid prioritet över EndSpace.
+" (Varför är dom ens exklusiva?)
 syn match Tab "\t"
 "syn match Over80 /\%81v.*/
 syn match EndSpace / *$/
 hi def Tab      ctermbg=darkblue guibg=#000060
 hi def Over80   ctermfg=yellow   guifg=#ffffcc
 hi def EndSpace ctermbg=blue     guibg=#0000ff
-" Kopiera indentering exakt. (Default ers�tter space med tab "n�r det g�r", vilket oftast �r fel.
+" Kopiera indentering exakt. (Default ersätter space med tab "när det går", vilket oftast är fel.
 set copyindent
 
 set viminfo='100,\"1000,:200,%,n~/.viminfo
