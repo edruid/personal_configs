@@ -39,8 +39,8 @@ bindkey "\e[5~" history-beginning-search-backward # pgup
 bindkey "\e[6~" history-beginning-search-forward  # pgdn
 bindkey '^[[1;5C' emacs-forward-word
 bindkey '^[[1;5D' emacs-backward-word
-#bindkey "\e[7~" beginning-of-line
-#bindkey "\e[8~" end-of-line
+bindkey "\e[7~" beginning-of-line
+bindkey "\e[8~" end-of-line
 bindkey "\e[H" beginning-of-line
 bindkey "\e[F" end-of-line
 #bindkey "\eOH" beginning-of-line
