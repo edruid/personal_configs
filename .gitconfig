@@ -25,7 +25,7 @@
 [merge]
    conflictstyle = diff3
 [rerere]
-   enabled = yes
+   enabled = no
 [grep]
    lineNumber = true
 
