@@ -29,3 +29,5 @@
 [grep]
    lineNumber = true
 
+[remote "origin"]
+	prune = true
