@@ -48,8 +48,8 @@ bindkey "\e[F" end-of-line
 #bindkey "\eOd" backward-word
 #bindkey "\eOc" forward-word
 
-alias py="python -m IPython || python"
-alias py3="python3 -m IPython || python3"
+alias py="python3 -m IPython || python"
+alias py2="python -m IPython || python3"
 alias find='noglob find'
 
 update-zsh() {
